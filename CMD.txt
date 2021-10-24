@@ -1,0 +1,92 @@
+Curso Ruby on Rails 6 API 
+#2.1 - Instalações no Windows
+
+git config --global user.name "Vandreh"
+git config --global user.email esmeraldovandreh@gmail.com
+
+gem install rails
+gem install sqlite3
+mkdir Projects
+mkdir Rails
+rails new tour-of-heroes
+rails s
+
+cd tour-of-heroes
+rails g scaffold Hero name:string
+rails db:create
+rails db:migrate
+rails s
+
+http://localhost:3000/heros
+
+
+
+#3 - Git e GitHub
+no VSCode abrir o terminal e adicionar o Git bash
+ls -la (mostrar diretorios escondidos)
+clear
+git status
+(nao executar esse codigo, apaga a pasta ".git") rm -rf .git
+git init .
+git status
+git add .
+git status
+git commit -m "Adiciona os arquivos iniciais do projeto"
+git log
+
+git remote add origin https://github.com/Vandreh/tour_of_heroes.git
+git remote -v
+git branch
+git push -u origin master
+
+CMD -> Criar SSH no GITHUB pelo HTTPS 
+https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+ls -la ~/.ssh
+
+https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+CMD
+clip < ~/.ssh/id_ed25519.pub
+
+https://github.com/settings/ssh/new
+Title: Chave do laptop
+
+CMD -> Segunda opção de criar chave SSH no GITHUB, agora pelo próprio SSH
+git remote set-url origin novo_caminho (git@github.com:Vandreh/tour_of_heroes.git)
+
+OK continuando.
+
+git remote -v
+git status
+git commit -am "Atualiza a documentação do projeto (README.md)"
+git status
+git push
+
+recomendação de site https://notion.so
+
+
+
+#4 - Deploy no Heroku
+heroku git:remote -a tour-of-heroi
+git remote -v
+git push heroku master
+bundle add pg -g "production"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
