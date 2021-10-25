@@ -74,6 +74,9 @@ git remote -v
 git push heroku master
 bundle add pg -g "production"
 
+git status
+git commit -am "Configura página inicial"
+
 
 
 
