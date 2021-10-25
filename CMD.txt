@@ -76,7 +76,7 @@ bundle add pg -g "production"
 
 git status
 git commit -am "Configura página inicial"
-
+git push
 
 
 
