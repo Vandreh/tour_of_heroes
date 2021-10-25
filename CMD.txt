@@ -78,6 +78,13 @@ git status
 git commit -am "Configura página inicial"
 git push
 
+EDITOR="code --wait" bin/rails credentials:edit
+  name: Gabriela e Amanda
+  password: Amo voces duas
+
+git status
+git commit -am "Adiciona autenticação básica para manipular CRUD"
+
 
 
 
